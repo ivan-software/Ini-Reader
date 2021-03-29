@@ -21,7 +21,7 @@ username="hacker228"
 password=12345
 ```
 
-After Creating Lets Read INI.
+After Creating, Lets Read INI And Print It.
 
 ```python
 import ini_reader
@@ -38,7 +38,7 @@ Result:
 Print=0 - Read Files Without Print It
 Print=1 - Read Files And Print It
 
-And Let Get Help Offline:
+And Lets Get Help Offline:
 
 ```python
 ini_reader.INIReader.Help()
