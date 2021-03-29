@@ -7,7 +7,7 @@ First Import The Module:
 ```python
 import ini_reader
 ```
-After Lets Create File With Extension ".ini" And Name Will Be "Very Important".
+After Lets Create File With Extension ".ini" And File Name Will Be "Very Important".
 
 ```ini
 [GITHUB]
