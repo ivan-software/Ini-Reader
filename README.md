@@ -1,12 +1,6 @@
 # Ini-Reader
 Ini-Reader For Python
 
-# Installation
-
-```pip
-pip install ini-reader
-```
-
 # Documentation
 
 First Import The Module:
