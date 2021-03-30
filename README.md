@@ -1,7 +1,7 @@
-# Ini-Reader
+# Ini-Reader 1.1
 Ini-Reader For Python
 
-# Documentation
+# Documentation (UPDATED)
 
 First Import The Module:
 ```python
@@ -38,6 +38,30 @@ And Lets Get Help Offline:
 ini_reader.INIReader.Help()
 ```
 
-This Is Full Documentation.
+Lets Write An Existing File
+
+Ini:
+
+(Name Will Be "Inf.ini"
+
+```ini
+None
+```
+
+```python
+a = "[PASSWORDS]\npassword_user1=12345\npassword_user2=123456
+ini_reader.INIReader.WriteIniFile("inf.ini", a)
+```
+
+Done
+
+Lets Create File And Write In Some-Info!
+
+```python
+a = "[PASSWORDS]\npassword_user1=12345\npassword_user2=123456
+ini_reader.CreateAndWriteIniFile("passwords.ini", a) 
+```
+
+Done
 
 #
