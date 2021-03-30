@@ -1,4 +1,4 @@
-# 1.0
+# 1.1
 
 import configparser
 import sys
@@ -6,12 +6,13 @@ import sys
 # Vars
 
 cfg = configparser.ConfigParser()
+
 Link = "https://github.com/ivan-software/Ini-Reader/"
 
-# Errors
+# Error Exceptions
 
 class IniReaderError(Exception):
-    pass
+    None
 
 class UnknownValueError(IniReaderError):
     def __init__(self, text):
@@ -21,10 +22,16 @@ class UnknownValueError(IniReaderError):
 
 class INIReader:
     def IniRead(FILE):
+        '''
+        Open File.
+        '''
         global cfg
         file = FILE
         cfg.read(file)
     def Read(BLOCK, VARIABLE, PRINT=1):
+        '''
+        Read File.
+        '''
         global cfg
         block = BLOCK
         var = VARIABLE
@@ -35,7 +42,28 @@ class INIReader:
             read = cfg[block][var]
         else:
             raise UnknownValueError(f"Unknown Value {PRINT}; \n MAX(0-1);")
+    def WriteIniFile(FILE, VARIABLE):
+        '''
+        Write Ini File.
+        '''
+        file = FILE
+        var = VARIABLE
+        ini = open(file, 'a')
+        ini.write(var)
+        ini.close()
+    def CreateAndWriteIniFile(FILENAME, STRINGTOWRITE):
+        '''
+        Create And Write Ini File.
+        '''
+        fn = FILENAME
+        stw = STRINGTOWRITE
+        file = open(fn, "w")
+        file.write(stw)
+        file.close()
     def Help():
+        '''
+        Get Help.
+        '''
         global Link
         print(
         "IniRead - Read INI \n "
@@ -50,7 +78,7 @@ class INIReader:
 #-----/*\----------/*\----------/*\-----
 
 __package__ = "INI-Reader"
-__version__ = "1.0"
+__version__ = "1.1"
 __author__ = "Ivan Perzhinskiy"
 __mask__ = "ini_reader"
 
